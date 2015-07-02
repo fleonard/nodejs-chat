@@ -1,0 +1,47 @@
+@mixin font-size($sizeValue) {
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue / 10) * 1rem;
+}
+
+@mixin cross-browser-opacity($value){
+	$IEValue: $value*100;
+	opacity: $value;
+	-moz-opacity: $value;
+	-khtml-opacity: $value;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+	filter: alpha(opacity=$IEValue);
+}
+
+@mixin cross-browser-transition($transition...) {
+    -ms-transition:    $transition;
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+@mixin cross-browser-border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin cf {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020"; 
+        display: block; 
+        height: 0; 
+        overflow: hidden; 
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}

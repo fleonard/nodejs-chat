@@ -1,0 +1,65 @@
+<div class="list channels">
+	<h2>channels</h2>
+	<ul>
+		<li ng-repeat="channel in userChannels" ui-sref-active="active" ><a ui-sref="index.chat({chat:'channel', chatId: channel.id, chatName: channel.name })"> {{channel.name}}</a></li> 
+	</ul>
+	<a class="more" ng-click="joinChannel($event)">{{allChannels.length - userChannels.length}} more...</a>
+</div>
+<div class="list users">
+	<h2>direct messages</h2>
+	<ul>
+		<li ng-repeat="user in users | limitTo:6" ng-if="$index != userLoggedInIndex" ui-sref-active="active" >
+			<a ui-sref="index.chat({chat:'users', chatId: user.id, chatName: user.name })"> {{user.name}}</a>
+		</li> 
+	</ul>
+	<a class="more" ng-click="showUserList($event)">{{users.length - 6}} more...</a>
+</div>
+<div class="list group">
+	<h2>private groups</h2>
+	<ul>
+		<li ng-repeat="group in groups" ui-sref-active="active" ><a ui-sref="index.chat({chat:'group', chatId: group.id, chatName: group.name })"> {{group.name}}</a></li> 
+	</ul>
+	<a class="more" ng-click="newPrivateGroup($event)">New private group...</a>
+</div>
+
+<div class="profile">
+	<div class="avatar">
+		<img ng-src="{{users[userLoggedInIndex].avatar}}">
+	</div>
+	<span>{{users[userLoggedInIndex].name}}</span>
+	<i class="fa fa-chevron-up" ng-click="menuClicked = !menuClicked"></i>
+</div>
+<!-- User List Popup -->
+<div 
+	class="user_list"
+	ng-show="userClicked">
+	<div class="header">
+		<h2>Direct Message</h2>
+		<span ng-click="showUserList($event)">X</span>
+	</div>
+	<div class="search_box">
+		<input 
+			class="form-control search" 
+			placeholder="Search..." 
+			ng-model="searchText"/>
+	</div>
+	<div class="scroller">
+		<ul>
+			<li 
+			ng-repeat="user in users | filter:searchText"
+			ng-if="$index != userLoggedInIndex"
+			ui-sref-active="active" >
+				<a ng-click="showUserList($event)" ui-sref="index.chat({chat:'users', chatId: user.id, chatName: user.name })"> {{user.name}}</a>
+			</li> 
+		</ul>
+	</div>
+</div>
+<!-- Logout Popup -->
+<div 
+	class="user_menu"
+	ng-show="menuClicked">
+	<a ng-click="logout($event)">
+		<i class="fa fa-sign-out"></i> 
+		Sign Out
+	</a>
+</div>

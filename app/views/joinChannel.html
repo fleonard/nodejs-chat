@@ -1,0 +1,41 @@
+<div class="modal-header">
+    <h3 class="modal-title">Browse Channels</h3>
+    <span ng-click="cancel()">X</span>
+</div>
+<div class="modal-body join_channel">
+    <div class="search_box">
+        <input 
+            class="form-control search" 
+            placeholder="Search..." 
+            ng-model="searchText"/>
+            <button class="btn btn-primary new" ng-click="newChannel()"> New Channel</button>
+    </div>
+    <div class="scroll-wrapper">
+        <h4>Channels</h4>
+        <div class="scroller">
+            <ul>
+                <li
+                    ng-repeat="channel in channels | filter:searchText"
+                    ng-mouseenter="showButton = true" 
+                    ng-mouseleave="showButton = false">
+                    <p class="name">{{channel.name}}</p>
+                    <p class="created">Created by {{channel.createdBy}} on {{channel.createdOn}}</p>
+                    <p>{{channel.description}}</p>
+                    <span class="members">
+                        <i ng-class="{'fa-check':channel.isIn, 'fa-user':!channel.isIn}" class="fa"></i>
+                        {{channel.members.length}}
+                    </span>
+                    <button 
+                        class=" join btn btn-primary" 
+                        ng-click="ok(channel)"
+                        ng-class="{in:channel.isIn}"
+                        ng-show="showButton">
+                        Join
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+</div>

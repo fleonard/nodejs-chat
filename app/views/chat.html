@@ -1,0 +1,102 @@
+<div class="container">
+  <h2>{{chat.name}}</h2>
+  <p class="description">{{chat.description}}</p>
+  <span ng-show="chat.members.length > 1" class="members"><i class="fa fa-user"></i>{{chat.members.length}}</span>
+  <div class="chat_content">
+    <div class="day_divider">
+      <hr>
+      <div class="day_label">Friday, June 6th, 2014</div>
+    </div>
+    <div class="message">
+      <div class="avatar">
+        <img ng-src="{{users[userLoggedInIndex].avatar}}" />
+      </div>
+      <span>{{users[userLoggedInIndex].name}}</span>
+      <span class="time">{{time | date:'HH:mm'}}</span>
+      <div class="message_content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend adipiscing eros convallis pulvinar. Fusce ut eros eu eros tincidunt elementum. Curabitur ornare in nunc faucibus placerat. Vestibulum tempus tortor ac lorem elementum hendrerit. Fusce varius tristique condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras lobortis dignissim tempus. Maecenas tellus dolor, ultricies non ultricies a, volutpat a velit. Sed ornare porta neque id consequat. Proin sed augue at ipsum tristique cursus. Etiam lobortis arcu ac ipsum accumsan, et condimentum est vehicula.</p>
+        <p>Nullam sodales, mauris sed dictum hendrerit, velit risus malesuada purus, id commodo risus turpis quis erat. Duis elementum posuere facilisis. Duis erat erat, pellentesque in lacus vel, convallis auctor risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec urna libero, congue a mauris in, sodales adipiscing ante. Integer sollicitudin id risus quis facilisis. Duis faucibus et ante a porttitor.</p>
+      </div>
+    </div>
+    <div class="message">
+      <div class="avatar">
+        <img ng-src="{{users[userLoggedInIndex].avatar}}" />
+      </div>
+      <span>{{users[userLoggedInIndex].name}}</span>
+      <span class="time">{{time | date:'HH:mm'}}</span>
+      <div class="message_content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend adipiscing eros convallis pulvinar. Fusce ut eros eu eros tincidunt elementum. Curabitur ornare in nunc faucibus placerat. Vestibulum tempus tortor ac lorem elementum hendrerit. Fusce varius tristique condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras lobortis dignissim tempus. Maecenas tellus dolor, ultricies non ultricies a, volutpat a velit. Sed ornare porta neque id consequat. Proin sed augue at ipsum tristique cursus. Etiam lobortis arcu ac ipsum accumsan, et condimentum est vehicula.</p>
+        <p>Nullam sodales, mauris sed dictum hendrerit, velit risus malesuada purus, id commodo risus turpis quis erat. Duis elementum posuere facilisis. Duis erat erat, pellentesque in lacus vel, convallis auctor risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec urna libero, congue a mauris in, sodales adipiscing ante. Integer sollicitudin id risus quis facilisis. Duis faucibus et ante a porttitor.</p>
+      </div>
+    </div>
+    <div class="message">
+      <div class="avatar">
+        <img ng-src="{{users[userLoggedInIndex].avatar}}" />
+      </div>
+      <span>{{users[userLoggedInIndex].name}}</span>
+      <span class="time">{{time | date:'HH:mm'}}</span>
+      <div class="message_content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend adipiscing eros convallis pulvinar. Fusce ut eros eu eros tincidunt elementum. Curabitur ornare in nunc faucibus placerat. Vestibulum tempus tortor ac lorem elementum hendrerit. Fusce varius tristique condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras lobortis dignissim tempus. Maecenas tellus dolor, ultricies non ultricies a, volutpat a velit. Sed ornare porta neque id consequat. Proin sed augue at ipsum tristique cursus. Etiam lobortis arcu ac ipsum accumsan, et condimentum est vehicula.</p>
+        <p>Nullam sodales, mauris sed dictum hendrerit, velit risus malesuada purus, id commodo risus turpis quis erat. Duis elementum posuere facilisis. Duis erat erat, pellentesque in lacus vel, convallis auctor risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec urna libero, congue a mauris in, sodales adipiscing ante. Integer sollicitudin id risus quis facilisis. Duis faucibus et ante a porttitor.</p>
+      </div>
+    </div>
+    <div class="message">
+      <div class="avatar">
+        <img ng-src="{{users[userLoggedInIndex].avatar}}" />
+      </div>
+      <span>{{users[userLoggedInIndex].name}}</span>
+      <span class="time">{{time | date:'HH:mm'}}</span>
+      <div class="message_content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend adipiscing eros convallis pulvinar. Fusce ut eros eu eros tincidunt elementum. Curabitur ornare in nunc faucibus placerat. Vestibulum tempus tortor ac lorem elementum hendrerit. Fusce varius tristique condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras lobortis dignissim tempus. Maecenas tellus dolor, ultricies non ultricies a, volutpat a velit. Sed ornare porta neque id consequat. Proin sed augue at ipsum tristique cursus. Etiam lobortis arcu ac ipsum accumsan, et condimentum est vehicula.</p>
+        <p>Nullam sodales, mauris sed dictum hendrerit, velit risus malesuada purus, id commodo risus turpis quis erat. Duis elementum posuere facilisis. Duis erat erat, pellentesque in lacus vel, convallis auctor risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec urna libero, congue a mauris in, sodales adipiscing ante. Integer sollicitudin id risus quis facilisis. Duis faucibus et ante a porttitor.</p>
+      </div>
+    </div>
+    <div class="message">
+      <div class="avatar">
+        <img ng-src="{{users[userLoggedInIndex].avatar}}" />
+      </div>
+      <span>{{users[userLoggedInIndex].name}}</span>
+      <span class="time">{{time | date:'HH:mm'}}</span>
+      <div class="message_content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend adipiscing eros convallis pulvinar. Fusce ut eros eu eros tincidunt elementum. Curabitur ornare in nunc faucibus placerat. Vestibulum tempus tortor ac lorem elementum hendrerit. Fusce varius tristique condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras lobortis dignissim tempus. Maecenas tellus dolor, ultricies non ultricies a, volutpat a velit. Sed ornare porta neque id consequat. Proin sed augue at ipsum tristique cursus. Etiam lobortis arcu ac ipsum accumsan, et condimentum est vehicula.</p>
+        <p>Nullam sodales, mauris sed dictum hendrerit, velit risus malesuada purus, id commodo risus turpis quis erat. Duis elementum posuere facilisis. Duis erat erat, pellentesque in lacus vel, convallis auctor risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec urna libero, congue a mauris in, sodales adipiscing ante. Integer sollicitudin id risus quis facilisis. Duis faucibus et ante a porttitor.</p>
+      </div>
+    </div>
+    <div class="message">
+      <div class="avatar">
+        <img ng-src="{{users[userLoggedInIndex].avatar}}" />
+      </div>
+      <span>{{users[userLoggedInIndex].name}}</span>
+      <span class="time">{{time | date:'HH:mm'}}</span>
+      <div class="message_content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend adipiscing eros convallis pulvinar. Fusce ut eros eu eros tincidunt elementum. Curabitur ornare in nunc faucibus placerat. Vestibulum tempus tortor ac lorem elementum hendrerit. Fusce varius tristique condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras lobortis dignissim tempus. Maecenas tellus dolor, ultricies non ultricies a, volutpat a velit. Sed ornare porta neque id consequat. Proin sed augue at ipsum tristique cursus. Etiam lobortis arcu ac ipsum accumsan, et condimentum est vehicula.</p>
+        <p>Nullam sodales, mauris sed dictum hendrerit, velit risus malesuada purus, id commodo risus turpis quis erat. Duis elementum posuere facilisis. Duis erat erat, pellentesque in lacus vel, convallis auctor risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec urna libero, congue a mauris in, sodales adipiscing ante. Integer sollicitudin id risus quis facilisis. Duis faucibus et ante a porttitor.</p>
+      </div>
+    </div>
+    <div class="message">
+      <div class="avatar">
+        <img ng-src="{{users[userLoggedInIndex].avatar}}" />
+      </div>
+      <span>{{users[userLoggedInIndex].name}}</span>
+      <span class="time">{{time | date:'HH:mm'}}</span>
+      <div class="message_content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend adipiscing eros convallis pulvinar. Fusce ut eros eu eros tincidunt elementum. Curabitur ornare in nunc faucibus placerat. Vestibulum tempus tortor ac lorem elementum hendrerit. Fusce varius tristique condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras lobortis dignissim tempus. Maecenas tellus dolor, ultricies non ultricies a, volutpat a velit. Sed ornare porta neque id consequat. Proin sed augue at ipsum tristique cursus. Etiam lobortis arcu ac ipsum accumsan, et condimentum est vehicula.</p>
+        <p>Nullam sodales, mauris sed dictum hendrerit, velit risus malesuada purus, id commodo risus turpis quis erat. Duis elementum posuere facilisis. Duis erat erat, pellentesque in lacus vel, convallis auctor risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec urna libero, congue a mauris in, sodales adipiscing ante. Integer sollicitudin id risus quis facilisis. Duis faucibus et ante a porttitor.</p>
+      </div>
+    </div>
+    <div class="message">
+      <div class="avatar">
+        <img ng-src="{{users[userLoggedInIndex].avatar}}" />
+      </div>
+      <span>{{users[userLoggedInIndex].name}}</span>
+      <span class="time">{{time | date:'HH:mm'}}</span>
+      <div class="message_content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend adipiscing eros convallis pulvinar. Fusce ut eros eu eros tincidunt elementum. Curabitur ornare in nunc faucibus placerat. Vestibulum tempus tortor ac lorem elementum hendrerit. Fusce varius tristique condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras lobortis dignissim tempus. Maecenas tellus dolor, ultricies non ultricies a, volutpat a velit. Sed ornare porta neque id consequat. Proin sed augue at ipsum tristique cursus. Etiam lobortis arcu ac ipsum accumsan, et condimentum est vehicula.</p>
+        <p>Nullam sodales, mauris sed dictum hendrerit, velit risus malesuada purus, id commodo risus turpis quis erat. Duis elementum posuere facilisis. Duis erat erat, pellentesque in lacus vel, convallis auctor risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec urna libero, congue a mauris in, sodales adipiscing ante. Integer sollicitudin id risus quis facilisis. Duis faucibus et ante a porttitor.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <input class="form-control input_message" placeholder="Type here..." />
+  </div>
+</div>

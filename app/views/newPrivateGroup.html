@@ -1,0 +1,31 @@
+<div class="modal-header">
+    <h3 class="modal-title">Create new Private Group</h3>
+    <span ng-click="cancel()">X</span>
+</div>
+<div class="modal-body private_group">
+    <p>A private group is only visible to its members, and only members of a private group can read or search its contents.</p>
+    <p class="name">
+        <label for="title_input">Name</label>
+        <input id="group_title" name="title_input" type="text" class="form-control title_input" value="" maxlength="21" ng-model="groupName">
+    </p>
+    <p class="desc">
+        <label for="title_input">Descritpion</label>
+        <textarea id="group_desc" rows="3" name="description" class="form-control" ng-model="groupDesc"></textarea>
+    </p>
+    <p class="user">
+        <label for="title_input">Invite Members</label>
+        <select class="form-control"
+                multiple
+                chosen
+                ng-model="user"
+                ng-options="user.name for user in users"
+                data-placeholder="Select Users"
+                style="width:50%;">
+          <option value=""></option>
+        </select>
+    </p>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+     <button class="btn btn-primary" ng-click="ok(groupName, groupDesc)">OK</button>
+</div>
